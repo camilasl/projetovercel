@@ -1,0 +1,107 @@
+header .nav-content {
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+
+header .fixed{
+    position: fixed;
+    background: $color_white;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+}
+
+
+header .nav-content .hamburger {
+    cursor: pointer;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+
+header .nav-content .hamburger .line {
+    width: 24px;
+    height: 2px;
+    background: $color_black;
+    margin-bottom: 4px;
+}
+
+
+
+header .nav-content .nav-bar {
+    height: 100%;
+    padding: 0 5% 0;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 9%;
+    z-index: -1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $color_white;
+    opacity: 0;
+}
+
+header .nav-content .active {
+    opacity: 1;
+    transition: visibility 0s ease 0s, opacity 0.5s ease 0s;
+    visibility: visible;
+}
+
+header .nav-content .nav-bar ul {
+    list-style-type: none;
+}
+
+header .nav-content .nav-bar ul li {
+    padding: 0 0 30px;
+}
+
+header .nav-content .nav-bar ul li a {
+    text-decoration: none;
+    font-family: "Noto Serif JP", serif;
+    color: $color_black;
+    font-size: 22px;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+header .nav-content .nav-bar ul li .active {
+    font-weight: 900;
+}
+
+@media only screen and (min-width: 932px) {
+    header .nav-content .hamburger {
+        display: none;
+    }
+
+    header .nav-content .nav-bar {
+        opacity: 1;
+        height: auto;
+        z-index: 3;
+        top: 0;
+        padding: 50px 25px;
+    }
+
+    header .nav-content .nav-bar ul {
+        display: flex;
+    }
+
+    header .nav-content .nav-bar ul li {
+        padding: 0;
+        margin-right: 30px;
+    }
+
+    header .nav-content .nav-bar ul li a {
+        font-size: 16px;
+    }
+
+}
+    
+

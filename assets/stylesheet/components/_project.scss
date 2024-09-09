@@ -1,0 +1,28 @@
+.project {
+    margin: 55px 0 30px;
+}
+
+.project .project-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+    margin-top: 50px;
+}
+
+.project .project-gallery a {
+    cursor: zoom-in;
+}
+
+.project .project-gallery .item-landscape-start {
+    grid-column: 1 / 3;
+}
+
+.project .project-gallery .item-landscape-end {
+    grid-column: 2 / 4;
+}
+
+.project .project-gallery a img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}

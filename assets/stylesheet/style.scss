@@ -1,0 +1,24 @@
+@import "./components/fonts";
+@import "./components/colors";
+@import "./components/header";
+@import "./components/index";
+@import "./components/contact";
+@import "./components/project";
+@import "./components/footer";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 18px;
+    line-height: 19px;
+    padding-bottom: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: $color_black;
+    text-align: center;
+    font-family: "Noto Serif JP", serif;
+}

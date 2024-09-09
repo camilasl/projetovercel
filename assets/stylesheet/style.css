@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap");
+@font-face {
+  font-family: "Futura";
+  src: url(../../assets/fonts/Futura/FuturaStdLight.otf);
+}
+header .nav-content {
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+}
+
+header .fixed {
+  position: fixed;
+  background: #ffffff;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+}
+
+header .nav-content .hamburger {
+  cursor: pointer;
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+
+header .nav-content .hamburger .line {
+  width: 24px;
+  height: 2px;
+  background: #282828;
+  margin-bottom: 4px;
+}
+
+header .nav-content .nav-bar {
+  height: 100%;
+  padding: 0 5% 0;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 9%;
+  z-index: -1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  opacity: 0;
+}
+
+header .nav-content .active {
+  opacity: 1;
+  transition: visibility 0s ease 0s, opacity 0.5s ease 0s;
+  visibility: visible;
+}
+
+header .nav-content .nav-bar ul {
+  list-style-type: none;
+}
+
+header .nav-content .nav-bar ul li {
+  padding: 0 0 30px;
+}
+
+header .nav-content .nav-bar ul li a {
+  text-decoration: none;
+  font-family: "Noto Serif JP", serif;
+  color: #282828;
+  font-size: 22px;
+  line-height: 32px;
+  text-transform: uppercase;
+}
+
+header .nav-content .nav-bar ul li .active {
+  font-weight: 900;
+}
+
+@media only screen and (min-width: 932px) {
+  header .nav-content .hamburger {
+    display: none;
+  }
+  header .nav-content .nav-bar {
+    opacity: 1;
+    height: auto;
+    z-index: 3;
+    top: 0;
+    padding: 50px 25px;
+  }
+  header .nav-content .nav-bar ul {
+    display: flex;
+  }
+  header .nav-content .nav-bar ul li {
+    padding: 0;
+    margin-right: 30px;
+  }
+  header .nav-content .nav-bar ul li a {
+    font-size: 16px;
+  }
+}
+.index {
+  width: 100%;
+  margin-top: 55px;
+}
+
+.index h1 {
+  font-family: "Futura";
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 22px;
+  line-height: 16px;
+  margin-bottom: 13px;
+  letter-spacing: 2px;
+  text-align: center;
+  transition: all 0.5s ease-in;
+}
+
+.index h1:hover {
+  letter-spacing: 10px;
+  transition: all 0.5s ease-in;
+}
+
+.index .project-gallery {
+  margin-top: 50px;
+}
+
+.index .project-gallery .project-cover {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.index .project-gallery .project-cover .cover-container {
+  position: relative;
+  width: 100%;
+  height: 630px;
+  display: flex;
+}
+
+.index .project-gallery .project-cover .cover-container img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.index .project-gallery .project-cover .cover-container .overlay {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 2, 2, 0.6);
+  line-height: 20px;
+  text-align: center;
+}
+
+.index .project-gallery .project-cover .cover-container:hover .overlay {
+  display: initial;
+  transition: opacity 0.15s ease;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.index .project-gallery .project-cover .cover-container .overlay span {
+  padding: 1em 2em;
+  color: #ffffff;
+  font-family: "Noto Serif JP", serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 540px) {
+  .index .project-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 15px;
+  }
+  .index .project-gallery .project-cover {
+    margin-bottom: 0;
+  }
+  .index .project-gallery .project-cover .cover-container {
+    height: 100%;
+  }
+  .index .project-gallery .project-cover .cover-container img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media only screen and (min-width: 932px) {
+  .index {
+    position: absolute;
+    top: 17%;
+  }
+  .index h1 {
+    font-size: 50px;
+  }
+  .index .project-gallery {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 3%;
+  }
+}
+.contact {
+  margin: 55px 0 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.contact form {
+  margin-top: 50px;
+  width: 100%;
+  max-width: 570px;
+}
+
+.contact form label {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 900;
+  color: #282828;
+  font-size: 12px;
+}
+
+.contact form input[type=text],
+.contact form textarea {
+  width: 100%;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: "Noto Serif JP", serif;
+  margin: 10px 0;
+}
+
+.contact form input[type=submit] {
+  color: #ffffff;
+  background: #282828;
+  font-family: "Noto Serif JP", serif;
+  border-radius: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 0;
+  line-height: 35px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 932px) {
+  .contact {
+    position: absolute;
+    top: 14%;
+    width: 100%;
+  }
+  .contact h1 {
+    font-size: 24px;
+  }
+}
+.project {
+  margin: 55px 0 30px;
+}
+
+.project .project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7px;
+  margin-top: 50px;
+}
+
+.project .project-gallery a {
+  cursor: zoom-in;
+}
+
+.project .project-gallery .item-landscape-start {
+  grid-column: 1/3;
+}
+
+.project .project-gallery .item-landscape-end {
+  grid-column: 2/4;
+}
+
+.project .project-gallery a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+footer {
+  background-color: #cdcdcd;
+  width: 100%;
+  padding: 10px 0;
+}
+
+footer .main-footer {
+  text-align: center;
+}
+
+footer .main-footer p {
+  font-family: "Futura";
+  font-weight: 300;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 18px;
+  line-height: 19px;
+  padding-bottom: 14px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #282828;
+  text-align: center;
+  font-family: "Noto Serif JP", serif;
+}/*# sourceMappingURL=style.css.map */
